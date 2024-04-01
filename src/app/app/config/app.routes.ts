@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () => import('@pages/layouts/main-menu-layout/main-menu-layout.component').then(c => c.MainMenuLayoutComponent),
+    loadComponent: () => import('@pages/layouts/main-menu-layout/ui/main-menu-layout.component').then(c => c.MainMenuLayoutComponent),
     children: [
       {
         path: 'authentication',

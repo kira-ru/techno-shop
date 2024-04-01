@@ -33,7 +33,10 @@
       "@entities/*": ["app/entities/*"],
       "@shared/*": ["app/shared/*"],
       "@environment/*": ["environments/*"]
-    }
+    },
+    "typeRoots": [
+      "src/types",
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -1,0 +1,28 @@
+<nz-layout class="main-menu">
+  <nz-header >
+    <header nz-flex nzJustify="space-between" >
+      <img ngSrc="/assets/imgs/logo.svg" alt="logo" height="64" width="64">
+
+      <ul nz-menu nzMode="horizontal">
+        @for (menuItem of MainMenuItems; track menuItem.title) {
+          <li nz-menu-item>
+            {{menuItem.title}}
+          </li>
+        }
+      </ul>
+
+
+      <ul nz-menu nzMode="horizontal">
+        @for (menuItem of ProfileMenuItems; track menuItem.image) {
+          <li nz-menu-item>
+            <span [nzType]="menuItem.image" nz-icon nzTheme="outline"></span>
+          </li>
+        }
+      </ul>
+    </header>
+
+  </nz-header>
+  <nz-content>
+    <router-outlet></router-outlet>
+  </nz-content>
+</nz-layout>
