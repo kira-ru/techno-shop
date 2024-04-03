@@ -1,0 +1,33 @@
+<ul nz-menu nzMode="horizontal">
+  <li nz-menu-item>
+    <span
+    nz-icon
+    nzType="search"
+    nzTheme="outline"
+  ></span>
+  </li>
+
+  <li nz-menu-item>
+    <span
+      nz-icon
+      nzType="shopping-cart"
+      nzTheme="outline"
+    ></span>
+  </li>
+
+  <li nz-menu-item>
+    <span
+      nz-icon
+      nzType="user"
+      nzTheme="outline"
+      nz-popover
+      nzPopoverTrigger="click"
+      nzPopoverPlacement="bottomRight"
+      [nzPopoverTitle]="profileMenu?.userTitleTemplate"
+      [(nzPopoverVisible)]="popOverVisible"
+      [nzPopoverContent]="profileMenu?.userContentTemplate"
+    ></span>
+  </li>
+</ul>
+
+<profile-menu></profile-menu>

@@ -1,0 +1,15 @@
+<ng-template #userContent>
+  <div [nzGap]="14" nzJustify="center" nz-flex>
+    <button nz-button nzType="primary">Log in</button>
+    <button nz-button nzType="default">Sing in</button>
+  </div>
+</ng-template>
+
+<ng-template #userTitle>
+  @if (loggedIn) {
+    <p>Welcome back, Friend!</p>
+  }
+  @else {
+    <p>Log in or register to access your profile</p>
+  }
+</ng-template>

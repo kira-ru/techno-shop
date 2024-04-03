@@ -1,27 +1,20 @@
 <nz-layout class="main-menu">
   <nz-header >
     <header nz-flex nzJustify="space-between" >
-      <img ngSrc="/assets/imgs/logo.svg" alt="logo" height="64" width="64">
+      <img ngSrc="/assets/imgs/logo.svg" alt="logo" height="64" width="64" priority>
 
       <ul nz-menu nzMode="horizontal">
         @for (menuItem of MainMenuItems; track menuItem.title) {
-          <li nz-menu-item>
-            {{menuItem.title}}
+          <li nz-menu-item nzMatchRouter>
+            <a [routerLink]="menuItem.route">{{menuItem.title}}</a>
           </li>
         }
       </ul>
 
-
-      <ul nz-menu nzMode="horizontal">
-        @for (menuItem of ProfileMenuItems; track menuItem.image) {
-          <li nz-menu-item>
-            <span [nzType]="menuItem.image" nz-icon nzTheme="outline"></span>
-          </li>
-        }
-      </ul>
+      <user-menu></user-menu>
     </header>
-
   </nz-header>
+
   <nz-content>
     <router-outlet></router-outlet>
   </nz-content>
