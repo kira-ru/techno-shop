@@ -1,0 +1,5 @@
+<li *ngFor="let movie of (movies$ | async)">
+  {{ movie.name }}
+</li>
+
+<button (click)="selectMovie('1')">check</button>
